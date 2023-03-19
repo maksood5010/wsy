@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    android:clickable="true"
+    android:fillViewport="true"
+    tools:context=".ui.leftmenu.verfy.VerifyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cp_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp20"
+        android:paddingEnd="@dimen/dp20">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:src="@drawable/verify_me"
+                android:id="@+id/iv_marker"
+                android:layout_width="@dimen/dp140"
+                android:layout_height="@dimen/dp140"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_code_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp20"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/verification_code_sent_to_your_mobile"
+                android:textColor="@color/textColorSecond"
+                android:textSize="@dimen/normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_marker" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/_971_000000"
+                android:textColor="@color/textColorSecond"
+                android:textSize="@dimen/normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_code_msg" />
+
+            <EditText
+                android:importantForAutofill="no"
+
+                android:id="@+id/et_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:ellipsize="end"
+                android:fontFamily="@font/opensans_regular"
+                android:hint="@string/code"
+                android:inputType="number"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/dp10"
+                android:singleLine="true"
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/textColorSecond"
+                android:textSize="@dimen/small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_number" />
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp15"
+                android:paddingBottom="@dimen/dp15"
+                android:text="@string/confirmation"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_code" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blackColor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp5"
+        android:paddingBottom="@dimen/dp5"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_camera_lay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/ic_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Camera"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gallery_lay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/ic_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Gallery"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_remove_lay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:padding="@dimen/dp10"
+                android:src="@drawable/ic_close_circle"
+                android:tint="@color/whiteColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Remove"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

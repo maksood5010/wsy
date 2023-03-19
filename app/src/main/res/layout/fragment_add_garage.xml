@@ -1,0 +1,358 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context="com.wsyapp.ui.leftmenu.addgarage.AddGarageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp150"
+            android:background="@color/colorTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp50"
+            android:layout_marginEnd="@dimen/dp10"
+            android:elevation="@dimen/dp3"
+            app:cardBackgroundColor="@color/whiteColor"
+            app:cardCornerRadius="@dimen/dp3"
+            app:cardElevation="@dimen/dp3"
+            app:contentPadding="@dimen/dp10"
+            app:layout_constraintBottom_toTopOf="@+id/tv_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/label_name_eng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/garage_english_name"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name_eng"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:fontFamily="@font/opensans_regular"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingEnd="@dimen/dp5"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/small"
+                        app:met_floatingLabel="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/label_name_ar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Garage_arabic_name"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_name_eng">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name_ar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:fontFamily="@font/opensans_regular"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingEnd="@dimen/dp5"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/small"
+                        app:met_floatingLabel="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/label_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Email"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_name_ar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:fontFamily="@font/opensans_regular"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingEnd="@dimen/dp5"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/small"
+                        app:met_floatingLabel="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/label_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/addresss"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:fontFamily="@font/opensans_regular"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingEnd="@dimen/dp5"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/small"
+                        app:met_floatingLabel="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/sp_emirates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="@string/select_city"
+                    android:textSize="@dimen/small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_address"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/textColorPrimary"
+                    app:met_textColorHint="@color/textColorPrimary" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/label_phone"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:hint="@string/phone"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+
+                    app:hintTextColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_emirates">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignStart="@+id/label"
+                        android:layout_alignTop="@+id/label"
+                        android:layout_alignBottom="@+id/label"
+
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_regular"
+
+                        android:inputType="phone"
+                        android:lines="1"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingEnd="@dimen/dp5"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/small"
+                        app:met_floatingLabel="normal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/label_working_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_working_hours"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_phone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_hours"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:fontFamily="@font/opensans_regular"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingEnd="@dimen/dp5"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/small"
+                        app:met_floatingLabel="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/sp_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="@string/select_category"
+                    android:textSize="@dimen/small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_working_hour"
+                    app:met_floatingLabel="normal"
+
+                    app:met_floatingLabelTextColor="@color/textColorPrimary"
+                    app:met_textColorHint="@color/textColorPrimary" />
+
+                <TextView
+                    android:id="@+id/txt_add_photo_cover"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="@string/add_garage_cover_photo"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/normal"
+                    app:layout_constraintEnd_toStartOf="@+id/cv_add_photo_cover"
+                    app:layout_constraintBottom_toBottomOf="@+id/cv_add_photo_cover"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_category"
+                    app:layout_constraintTop_toTopOf="@+id/cv_add_photo_cover" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_add_photo_cover"
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="@dimen/dp90"
+
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/dp3"
+                    app:cardBackgroundColor="@color/grayColor"
+                    app:cardCornerRadius="@dimen/dp3"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_category">
+
+
+                    <ImageView
+                        android:id="@+id/iv_garage_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_add" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    app:layout_constraintEnd_toStartOf="@+id/cv_license"
+                    android:gravity="start"
+
+                    android:id="@+id/txt_license"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/add_trade_license"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/cv_license"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_add_photo_cover"
+                    app:layout_constraintTop_toTopOf="@+id/cv_license" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_license"
+
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="@dimen/dp90"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/dp3"
+                    app:cardBackgroundColor="@color/grayColor"
+
+                    app:cardCornerRadius="@dimen/dp3"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/txt_license"
+                    app:layout_constraintStart_toStartOf="@+id/cv_add_photo_cover"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_add_photo_cover">
+
+
+                    <ImageView
+                        android:id="@+id/iv_garage_license"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_add" />
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_add"
+            style="@style/textbtn"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="@string/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_form" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

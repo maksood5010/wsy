@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ListPreference
+        android:defaultValue="0"
+        android:dialogTitle="@string/language"
+        android:entries="@array/language_entries"
+        android:entryValues="@array/language_values"
+        android:key="language"
+        android:summary="@string/select_langauge_msg"
+        android:title="@string/language" />
+
+
+    <Preference
+        android:key="application_version"
+        android:title="@string/app_version" />
+
+    <!--  <Preference
+          android:key="privacy"
+          android:title="Privacy" />
+      <Preference
+          android:key="term"
+          android:title="Term Condition">
+
+      </Preference>
+      <Preference
+          android:key="faq"
+          android:title="@string/FAQ">
+
+      </Preference>
+  -->
+    <Preference android:title="@string/app_details">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="market://details?id=ae.edes.saraab" />
+
+    </Preference>
+
+</PreferenceScreen>

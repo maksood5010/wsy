@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cl_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+        <TextView
+
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp5"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:text="@string/Select_Address"
+            android:textColor="@color/blackColor"
+            android:layout_marginHorizontal="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:textSize="@dimen/small" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/city_te"
+            android:hint="@string/city"
+            android:layout_marginHorizontal="@dimen/dp10">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:id="@+id/te_city"
+                android:ellipsize="end"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/textColorSecond"
+                android:textSize="@dimen/small" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:hint="@string/area"
+            android:id="@+id/area_te"
+            android:layout_marginHorizontal="@dimen/dp10">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/te_area"
+                android:layout_height="@dimen/dp40"
+                android:ellipsize="end"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/textColorSecond"
+                android:textSize="@dimen/small" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginHorizontal="@dimen/dp10"
+            android:id="@+id/phone_te"
+            android:hint="@string/phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/te_phone"
+                android:layout_height="@dimen/dp40"
+                android:ellipsize="end"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/textColorSecond"
+                android:textSize="@dimen/small" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/street_te"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginHorizontal="@dimen/dp10"
+            android:hint="@string/street">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/te_street"
+                android:layout_height="@dimen/dp40"
+                android:ellipsize="end"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/textColorSecond"
+                android:textSize="@dimen/small" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/building_te"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:hint="@string/building"
+            android:layout_marginHorizontal="@dimen/dp10">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/te_building"
+                android:layout_height="@dimen/dp40"
+                android:ellipsize="end"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/textColorSecond"
+                android:textSize="@dimen/small" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:hint="@string/apartment"
+            android:id="@+id/apartment_te"
+            android:layout_marginHorizontal="@dimen/dp10">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:id="@+id/te_apartment"
+                android:ellipsize="end"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/textColorSecond"
+                android:textSize="@dimen/small" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_select"
+        style="@style/textbtn"
+        android:text="@string/submit"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</LinearLayout>

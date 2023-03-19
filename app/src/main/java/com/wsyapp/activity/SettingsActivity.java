@@ -1,0 +1,248 @@
+package com.wsyapp.activity;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.os.Build;
+import android.os.Bundle;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceActivity;
+import android.util.AttributeSet;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+
+import androidx.appcompat.widget.AppCompatCheckBox;
+import androidx.appcompat.widget.AppCompatCheckedTextView;
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatRadioButton;
+import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.appbar.AppBarLayout;
+import com.wsyapp.MainActivity;
+import com.wsyapp.R;
+import com.wsyapp.utils.LocalizationPref;
+import com.wsyapp.utils.LocalizationUtil;
+import com.wsyapp.utils.MyConstants;
+
+
+public class SettingsActivity extends PreferenceActivity {
+    private static String appVersion;
+    private static Context context;
+    private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object value) {
+            String stringValue = value.toString();
+            if (preference instanceof ListPreference) {
+                // For list preferences, look up the correct display value in
+                // the preference's 'entries' list.
+                ListPreference listPreference = (ListPreference) preference;
+                int index = listPreference.findIndexOfValue(stringValue);
+
+                // Set the summary to reflect the new value.
+                preference.setSummary(index >= 0 ? listPreference.getEntries()[index] : null);
+            }
+            return true;
+        }
+    };
+
+
+    private static void setPreferenceSummary(Preference preference, String value) {
+        preference.setSummary(value);
+    }
+
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
+        context = getApplicationContext();
+        AppBarLayout bar;
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            LinearLayout root = (LinearLayout) findViewById(android.R.id.list).getParent().getParent().getParent();
+            bar = (AppBarLayout) LayoutInflater.from(this).inflate(R.layout.toolbar_settings, root, false);
+            root.addView(bar, 0);
+        } else {
+            ViewGroup root = findViewById(android.R.id.content);
+            ListView content = (ListView) root.getChildAt(0);
+            root.removeAllViews();
+            bar = (AppBarLayout) LayoutInflater.from(this).inflate(R.layout.toolbar_settings, root, false);
+
+            int height;
+            TypedValue tv = new TypedValue();
+            if (getTheme().resolveAttribute(R.attr.actionBarSize, tv, true)) {
+                height = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
+            } else {
+                height = bar.getHeight();
+            }
+
+            content.setPadding(0, height, 0, 0);
+            root.addView(content);
+            root.addView(bar);
+        }
+
+        Toolbar Tbar = (Toolbar) bar.getChildAt(0);
+        Tbar.setNavigationOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        try {
+            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            appVersion = pInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            appVersion = "unknown";
+        }
+
+        setupSimplePreferencesScreen();
+    }
+
+    @SuppressWarnings("deprecation")
+    private void setupSimplePreferencesScreen() {
+        addPreferencesFromResource(R.xml.preference_settings);
+
+        //EditTextPreference prefRadius = (EditTextPreference) findPreference("notifications_radius");
+
+        //Language
+
+        Preference privacy = findPreference("privacy");
+
+       /* privacy.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(getApplicationContext(), TermActivity.class);
+                intent.putExtra("data",1);
+                startActivity(intent);
+                return true;
+            }
+        });
+
+        Preference term = findPreference("term");
+
+        term.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(getApplicationContext(), TermActivity.class);
+                intent.putExtra("data",2);
+                startActivity(intent);
+                return true;
+            }
+        });
+
+        Preference faq = findPreference("faq");
+
+        faq.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(getApplicationContext(), TermActivity.class);
+                intent.putExtra("data",3);
+                startActivity(intent);
+                return true;
+            }
+        });*/
+
+
+        final ListPreference listPreference = (ListPreference) findPreference("language");
+
+        setListPreferenceData(listPreference, this, 0);
+
+        listPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+
+                setListPreferenceData(listPreference, SettingsActivity.this, 0);
+                return false;
+            }
+        });
+
+        listPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                //Toast.makeText(getApplicationContext(),newValue.toString(),Toast.LENGTH_LONG).show();
+                listPreference.setValue(newValue.toString());
+                setListPreferenceData(listPreference, SettingsActivity.this, 1);
+                return false;
+            }
+
+
+        });
+
+        //End Language
+
+/*
+        float distance = UserAccessSession.getInstance(context).getFilterDistance();
+        String val = String.valueOf(Config.MAX_RADIUS_IN_KM);
+        if (distance > 0) {
+            val = String.valueOf(distance);
+        }*/
+
+        //prefRadius.setText(val);
+
+        //bindPreferenceSummaryToValue(findPreference("notifications_radius"));
+        Preference app_version = findPreference("application_version");
+        setPreferenceSummary(app_version, appVersion);
+    }
+
+    protected void setListPreferenceData(ListPreference lp, Activity activity, int st) {
+
+        //lp.setEntries(entries);
+        int value = Integer.parseInt(lp.getValue());
+        CharSequence[] entries = lp.getEntries();
+        lp.setSummary(entries[value]);
+
+        String languageToLoad = "";
+        if (value == 0) {
+            LocalizationPref localizationPref = new LocalizationPref(this);
+            localizationPref.saveCurrentLanguage(MyConstants.KEY_ENGLISH);
+        } else {
+            LocalizationPref localizationPref = new LocalizationPref(this);
+            localizationPref.saveCurrentLanguage(MyConstants.KEY_ARABIC);
+        }
+        if (st == 1) {
+            Intent myIntent = new Intent(getApplicationContext(),
+                    MainActivity.class);
+            startActivity(myIntent);
+            finish();
+        }
+    }
+
+    @Override
+    public View onCreateView(String name, Context context, AttributeSet attrs) {
+        // Allow super to try and create a view first
+        LocalizationUtil.INSTANCE.applyLanguage(this);
+
+        final View result = super.onCreateView(name, context, attrs);
+        if (result != null) {
+            return result;
+        }
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            // If we're running pre-L, we need to 'inject' our tint aware Views in place of the
+            // standard framework versions
+            switch (name) {
+                case "EditText":
+                    return new AppCompatEditText(this, attrs);
+                case "Spinner":
+                    return new AppCompatSpinner(this, attrs);
+                case "CheckBox":
+                    return new AppCompatCheckBox(this, attrs);
+                case "RadioButton":
+                    return new AppCompatRadioButton(this, attrs);
+                case "CheckedTextView":
+                    return new AppCompatCheckedTextView(this, attrs);
+            }
+        }
+
+        return null;
+    }
+
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+    }
+}

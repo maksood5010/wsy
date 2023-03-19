@@ -1,0 +1,114 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/opensans</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/grayColor</item>
+        <item name="colorPrimaryDark">@color/grayColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="colorAccent">#6200ea</item>
+        <item name="android:colorControlNormal">#f9a825</item>
+    </style>
+
+    <style name="AppThemeRatingBar" parent="Theme.AppCompat">
+        <item name="ratingBarStyle">@style/MyRatingBar</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle" parent="android:Theme">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="BadeDialogStyle">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="textbtn">
+        <item name="android:textSize">@dimen/big</item>
+        <item name="android:textColor">@color/whiteColor</item>
+        <item name="android:layout_height">@dimen/dp50</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/colorTheme</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="textbtn_gray">
+        <item name="android:textSize">@dimen/big</item>
+        <item name="android:textColor">@color/whiteColor</item>
+        <item name="android:layout_height">@dimen/dp50</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/grayDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="boxBackgroundColor">@color/whiteColor</item>
+        <item name="android:background">@color/whiteColor</item>
+
+
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="SplashTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="editText">
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:layout_height">@dimen/dp50</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorHint">@color/textColorSecond</item>
+        <item name="android:maxLines">1</item>
+        <item name="singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+
+    </style>
+    <style name="editText_multiline">
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/dp0</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorHint">@color/textColorSecond</item>
+        <item name="android:inputType">textMultiLine</item>
+    </style>
+</resources>

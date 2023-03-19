@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "447365089809",
+    "firebase_url": "https://wsyapp-58449.firebaseio.com",
+    "project_id": "wsyapp-58449",
+    "storage_bucket": "wsyapp-58449.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447365089809:android:11ccf39587bc6dd8d1ffb0",
+        "android_client_info": {
+          "package_name": "ae.edes.wsy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447365089809-imalp3hoakovil0km4s9tof50elb1nie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ae.edes.wsy",
+            "certificate_hash": "3dd93099db861dfa4b0566c0329143ab20ef0b8b"
+          }
+        },
+        {
+          "client_id": "447365089809-5k5i0205309lheggg8c99c958l33vtvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD80mzUA48wW4RxohVwWb3T-I0JMT_nCAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447365089809-5k5i0205309lheggg8c99c958l33vtvd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

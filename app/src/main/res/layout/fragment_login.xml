@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!--  <FrameLayout
+      android:id="@+id/content_frame"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"></FrameLayout>-->
+    <RelativeLayout
+        android:id="@+id/rl_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteColor">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/logo" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp5"
+            android:background="@color/whiteColor"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:elevation="5dp"
+            app:cardElevation="@dimen/dp5"
+            card_view:cardCornerRadius="@dimen/dp5"
+            card_view:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whiteColor"
+                android:padding="@dimen/dp16">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/labelname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:hint="@string/name"
+                    android:textColorHint="@color/colorPrimary"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ems="10"
+
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingEnd="@dimen/dp10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTheme"
+                        android:textSize="@dimen/normal"
+                        app:met_floatingLabel="normal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/labelemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelname"
+                    android:layout_marginStart="0dp"
+                    android:hint="@string/enter_email_id"
+                    android:textColorHint="@color/colorPrimary"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignStart="@+id/labelemail"
+                        android:layout_alignTop="@+id/label"
+                        android:layout_alignBottom="@+id/label"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingEnd="@dimen/dp10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTheme"
+                        android:textSize="@dimen/normal"
+                        app:met_floatingLabel="normal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelemail"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/whiteColor"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp10"
+                    app:ccp_arrowSize="@dimen/big"
+                    app:ccp_backgroundColor="@color/whiteColor"
+                    app:ccp_defaultNameCode="ae"
+                    app:ccp_enablePhoneAutoFormatter="true"
+                    app:ccp_hideNameCode="true"
+                    app:ccp_hidePhoneCode="true"
+                    app:ccp_textColor="@color/textColorPrimary"
+                    app:ccp_textSize="18dp"
+                    tools:ignore="MissingConstraints" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelemail"
+
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/ccp"
+                    android:textColorHint="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignStart="@+id/label"
+                        android:layout_alignTop="@+id/label"
+                        android:layout_alignBottom="@+id/label"
+
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:lines="1"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingEnd="@dimen/dp10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTheme"
+                        android:textSize="@dimen/big"
+                        app:met_floatingLabel="normal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_send"
+
+                    style="@style/textbtn"
+                    android:layout_below="@+id/label"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:text="@string/send" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

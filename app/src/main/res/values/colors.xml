@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E8161E</color>
+    <color name="colorPrimaryDark">#D50000</color>
+    <color name="colorAccent">#E8161E</color>
+    <color name="colorTheme_light">#E8161E</color>
+    <color name="colorTheme">#eb2128</color>
+    <color name="colorBlue">#1679E1</color>
+
+  <!--  <color name="textColorSecond">#757575</color>-->
+    <color name="textColorSecond">#7c7c7c</color>
+    <color name="dividerPrimaryColor">#C3C3C3</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="blackColor">#000000</color>
+    <color name="blackColor_20">#CC000000</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="grayColor">#757575</color>
+    <color name="bgColorSec">#f4f4f4</color>
+
+    <color name="colorTransparent">#51000000</color>
+    <color name="grayDark">#646262</color>
+    <color name="grayTint">#acacac</color>
+    <color name="background">#dddddd</color>
+    <color name="green">#27a619</color>
+    <color name="red">#ff0000</color>
+
+</resources>

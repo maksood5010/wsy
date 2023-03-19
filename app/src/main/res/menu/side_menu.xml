@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_user"
+        android:title="@string/profile"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_my_request"
+        android:icon="@drawable/ic_terms"
+        android:title="@string/my_requests"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_my_order"
+        android:icon="@drawable/ic_terms"
+        android:title="@string/my_orders"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@drawable/ic_about"
+        android:title="@string/about_wsy"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_faq"
+        android:icon="@drawable/ic_emoji"
+        android:title="@string/faq"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_term"
+        android:icon="@drawable/ic_terms"
+        android:title="@string/term_and_conditions"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_complains"
+        android:icon="@drawable/ic_complain"
+        android:title="@string/complains"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_add_garage"
+        android:icon="@drawable/ic_terms"
+        android:title="@string/add_garage"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/ic_home"
+        android:title="@string/settings"
+        app:showAsAction="withText" />
+
+
+</menu>

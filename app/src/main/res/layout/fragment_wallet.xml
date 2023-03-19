@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColorSec"
+    android:fillViewport="true"
+    tools:context=".ui.leftmenu.wallet.WalletFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            android:elevation="@dimen/dp5"
+            app:cardCornerRadius="@dimen/dp5"
+            app:cardElevation="@dimen/dp5"
+            app:contentPadding="@dimen/dp10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.rishabhharit.roundedimageview.RoundedImageView
+                        android:id="@+id/iv_car_img"
+                        android:layout_width="@dimen/dp60"
+                        android:layout_height="@dimen/dp60"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_image_placeholder"
+                        app:cornerRadius="@dimen/dp50"
+                        app:roundedCorners="all" />
+
+                    <LinearLayout
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@color/whiteColor"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/opensans_regular"
+                            android:gravity="center_vertical"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="@string/hello"
+                            android:textColor="@color/textColorSecond"
+                            android:textColorHint="@color/textColorSecond"
+                            android:textSize="@dimen/small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@color/whiteColor"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/opensans_regular"
+                            android:gravity="center_vertical"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="@string/_971_000000"
+                            android:textColor="@color/textColorSecond"
+                            android:textColorHint="@color/textColorSecond"
+                            android:textSize="@dimen/small" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_recharge_history"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_gravity="center|end"
+                        android:padding="@dimen/dp5"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_history"
+                        android:tint="@color/textColorSecond"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/dotted_line" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/whiteColor"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/available_credit"
+                    android:textColor="@color/textColorSecond"
+                    android:textColorHint="@color/textColorSecond"
+                    android:textSize="@dimen/small" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/whiteColor"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/aed_55"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/textColorSecond"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp10"
+            android:elevation="@dimen/dp5"
+            app:cardCornerRadius="@dimen/dp5"
+            app:cardElevation="@dimen/dp5"
+            app:contentPadding="@dimen/dp10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_wallet">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp5"
+                    android:singleLine="true"
+                    android:text="@string/amount_to_recharge"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/small" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp30"
+                        android:background="@color/whiteColor"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center_vertical"
+                        android:hint="@string/select_or_enter_amount_aed"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textColorHint="@color/textColorSecond"
+                        android:textSize="@dimen/small" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_wallet"
+                        android:tint="@color/textColorSecond" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/dividerPrimaryColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/stroke_gray_rectangle"
+                    android:orientation="horizontal"
+                    android:weightSum="12">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp1"
+                        android:layout_weight="3"
+                        android:background="@color/whiteColor"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/_25_aed"
+                        android:textColor="@color/textColorSecond"
+                        android:textColorHint="@color/textColorSecond"
+                        android:textSize="@dimen/small" />
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="match_parent"
+                        android:background="@color/grayColor" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp1"
+                        android:layout_weight="3"
+                        android:background="@color/whiteColor"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/_50_aed"
+                        android:textColor="@color/textColorSecond"
+                        android:textColorHint="@color/textColorSecond"
+                        android:textSize="@dimen/small" />
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="match_parent"
+                        android:background="@color/grayColor" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp1"
+                        android:layout_weight="3"
+                        android:background="@color/whiteColor"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/_75_aed"
+                        android:textColor="@color/textColorSecond"
+                        android:textColorHint="@color/textColorSecond"
+                        android:textSize="@dimen/small" />
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="match_parent"
+                        android:background="@color/grayColor" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp1"
+                        android:layout_weight="3"
+                        android:background="@color/whiteColor"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/_100_aed"
+                        android:textColor="@color/textColorSecond"
+                        android:textColorHint="@color/textColorSecond"
+                        android:textSize="@dimen/small" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_recharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp15"
+                    android:paddingBottom="@dimen/dp15"
+                    android:text="@string/recharge"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

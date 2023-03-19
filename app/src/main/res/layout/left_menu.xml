@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp15"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:text="@string/log_in"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/div_0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_login" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_6">
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_home"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/home"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_login" />
+
+        <LinearLayout
+            android:id="@+id/ll_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_6">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_user"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/profile"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_profile" />
+
+        <LinearLayout
+            android:id="@+id/ll_my_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_4">
+
+            <ImageView
+                android:id="@+id/iv_my_request"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_terms"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+
+                android:id="@+id/tv_my_reuest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/my_requests"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_profile" />
+
+        <LinearLayout
+            android:id="@+id/ll_my_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_4">
+
+            <ImageView
+                android:id="@+id/iv_my_order"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_terms"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+
+                android:id="@+id/tv_my_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/my_orders"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_profile" />
+
+        <LinearLayout
+            android:id="@+id/ll_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_about"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_about"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+
+                android:id="@+id/tv_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/about_wsy"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/div_4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_rate" />
+
+        <LinearLayout
+            android:id="@+id/ll_faq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_4">
+
+            <ImageView
+                android:id="@+id/iv_faq"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_emoji"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+                android:id="@+id/tv_faq"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/faq"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/div_5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_faq" />
+
+        <LinearLayout
+            android:id="@+id/ll_term"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_5">
+
+            <ImageView
+                android:id="@+id/iv_term"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_terms"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+                android:id="@+id/tv_term"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/term_and_conditions"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/div_6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_term" />
+
+        <LinearLayout
+            android:id="@+id/ll_complain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_6">
+
+            <ImageView
+                android:id="@+id/iv_complain"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_complain"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+                android:id="@+id/tv_complain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/complains"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/div_7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_complain" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_add_garage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_4">
+
+            <ImageView
+                android:id="@+id/iv_add_garage"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_terms"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+                android:id="@+id/tv_add_garage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/add_garage"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerPrimaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_profile" />
+
+        <LinearLayout
+            android:id="@+id/ll_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_6">
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:src="@drawable/ic_settings"
+                android:tint="@color/image_state_color" />
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:text="@string/settings"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

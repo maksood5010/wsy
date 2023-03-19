@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp5"
+    android:layout_marginBottom="@dimen/dp5">
+
+    <ImageView
+        android:id="@+id/iv_category"
+        android:layout_width="@dimen/dp60"
+        android:layout_height="@dimen/dp40"
+        android:padding="@dimen/dp10"
+        android:scaleType="centerCrop"
+        android:src="@drawable/crane"
+        android:tint="@color/textColorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/tv_go"
+        app:layout_constraintEnd_toStartOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:ellipsize="end"
+        android:fontFamily="@font/opensans_regular"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/service"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/normal"
+        app:layout_constraintEnd_toStartOf="@+id/tv_service"
+        app:layout_constraintStart_toEndOf="@+id/iv_category"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/opensans_regular"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/normal"
+        app:layout_constraintEnd_toStartOf="@+id/iv_forward"
+        app:layout_constraintStart_toEndOf="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_na"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/opensans_regular"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="@string/name"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/small"
+        app:layout_constraintStart_toEndOf="@+id/iv_category"
+        app:layout_constraintTop_toBottomOf="@+id/tv_service" />
+
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp10"
+        android:ellipsize="end"
+        android:fontFamily="@font/opensans_regular"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="@string/name"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/small"
+        app:layout_constraintEnd_toStartOf="@+id/iv_forward"
+        app:layout_constraintStart_toEndOf="@+id/tv_na"
+        app:layout_constraintTop_toTopOf="@+id/tv_na" />
+
+    <TextView
+        android:id="@+id/tv_pr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/opensans_regular"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="@string/price"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/small"
+        app:layout_constraintStart_toStartOf="@+id/tv_na"
+        app:layout_constraintTop_toBottomOf="@+id/tv_na" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/opensans_regular"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="@string/price"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/small"
+        app:layout_constraintEnd_toStartOf="@+id/iv_forward"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_pr" />
+
+    <TextView
+        android:id="@+id/tv_go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/opensans_regular"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/go"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+
+    <ImageView
+        android:id="@+id/iv_forward"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:padding="@dimen/dp14"
+        android:scaleType="fitXY"
+        android:src="@drawable/next"
+        android:visibility="gone"
+        android:tint="@color/textColorPrimary"
+
+        app:layout_constraintBottom_toTopOf="@+id/tv_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_service"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
